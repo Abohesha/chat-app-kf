@@ -165,7 +165,7 @@ export default function Home() {
                   ﴿وَمِنْ آيَاتِهِ مَنَامُكُم بِاللَّيْلِ وَالنَّهَارِ وَابْتِغَاؤُكُم مِّن فَضْلِهِ﴾
                 </p>
                 <p className="text-white/90 text-base font-medium">
-                  "And among His signs is your sleep by night and day, and your seeking of His bounty" - Quran 30:23
+                  &ldquo;And among His signs is your sleep by night and day, and your seeking of His bounty&rdquo; - Quran 30:23
                 </p>
               </div>
             </div>

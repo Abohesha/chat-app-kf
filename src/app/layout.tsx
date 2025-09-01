@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Amiri } from "next/font/google";
+import { Amiri, Lateef } from "next/font/google";
 import "./globals.css";
 
 const amiri = Amiri({
@@ -7,6 +7,14 @@ const amiri = Amiri({
   weight: ['400', '700'],
   style: ['normal', 'italic'],
   display: 'swap',
+  variable: '--font-amiri',
+});
+
+const lateef = Lateef({
+  subsets: ['latin', 'arabic'],
+  weight: ['200', '300', '400', '500', '600', '700', '800'],
+  display: 'swap',
+  variable: '--font-lateef',
 });
 
 export const metadata: Metadata = {
@@ -24,21 +32,8 @@ export default function RootLayout({
     <html lang="en" dir="ltr">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-        />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
       </head>
-      <body className={`${amiri.className} bg-islamic-pattern min-h-screen`}>
+      <body className={`${amiri.className} ${lateef.variable} bg-islamic-pattern min-h-screen`}>
         {children}
       </body>
     </html>
