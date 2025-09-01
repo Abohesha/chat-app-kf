@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: kareem-fuad-dream-interpretations
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: ADMIN_TOKEN
+        sync: false
+    disk:
+      name: data
+      mountPath: /opt/render/project/src/.next/cache
+      sizeGB: 1
