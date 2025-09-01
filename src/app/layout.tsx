@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   title: "Kareem Fuad Dream Interpretations | تفسير الأحلام",
   description: "Islamic dream interpretation service by Kareem Fuad. Submit your dreams for interpretation based on Islamic teachings.",
   keywords: "dream interpretation, Islamic dreams, تفسير الأحلام, Kareem Fuad",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -30,9 +33,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="ltr">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <body className={`${amiri.className} ${lateef.variable} bg-islamic-pattern min-h-screen`}>
         {children}
       </body>
